@@ -12,8 +12,15 @@ startButton.addEventListener("click", function () {
 });
 
 function startTimer() {
-  setInterval(function () {
+  const timer = setInterval(function () {
+    
     timeLeft = timeLeft - 1;
     timeText.textContent = timeLeft;
+    
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      timeText.textContent = 0;
+    }
+    
   }, 1000)
 }

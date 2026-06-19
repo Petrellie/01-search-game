@@ -14,7 +14,7 @@ startButton.addEventListener("click", function () {
 function startTimer() {
   const timer = setInterval(function () {
     
-    timeLeft = timeLeft - 1;
+    timeLeft = timeLeft - 10;
     timeText.textContent = timeLeft;
     
     if (timeLeft <= 0) {
